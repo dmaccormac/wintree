@@ -1,0 +1,38 @@
+﻿<Window x:Class="wintree.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wintree"
+        mc:Ignorable="d"
+        Title="WinTree" Height="400" Width="300" WindowStyle="ToolWindow">
+    <Grid>
+        <TreeView Name="treeview" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding XPath=Group}" Margin="10,10,10,25" MouseDoubleClick="Item_DoubleClick"  >
+
+            <TreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="Launch" Header="Launch" Click="Launch_Click"/>
+                    <MenuItem Name="Open" Header="Open XML File" Click="Open_Click"/>
+                    <MenuItem Name="Edit" Header="Edit XML" Click="Edit_Click"/>
+                    <MenuItem Name="Refresh" Header="Refresh" Click="Refresh_Click"/>
+                    <MenuItem Name="Log" Header="View Log" Click="Log_Click"/>
+                    <MenuItem Name="OnTop" Header="Always on Top" IsCheckable="True" IsChecked="False" Click="OnTop_Click" />
+                    <MenuItem Name="About" Header="About" Click="About_Click"/>
+                </ContextMenu>
+
+
+            </TreeView.ContextMenu>
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding XPath=Item}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Height="16" Margin="3,0" Source="{Binding XPath=@Icon}" />
+                        <TextBlock Text="{Binding XPath=@Name}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <StatusBar VerticalAlignment="Bottom" Margin="10,1,10,1" Height="20" Background="White">
+            <TextBlock x:Name="TextBlock_Status" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="{Binding Source={x:Static local:Settings.Default}, Path=TreeFile, Mode=TwoWay}" FontSize="11"/>
+        </StatusBar>
+    </Grid>
+</Window>

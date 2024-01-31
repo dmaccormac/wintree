@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="wintree" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TreeFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wintree.xml</Value>
+    </Setting>
+    <Setting Name="LogFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wintree.log</Value>
+    </Setting>
+    <Setting Name="Editor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">notepad.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
