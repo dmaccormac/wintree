@@ -8,4 +8,8 @@ An explorer-sytle tree launcher application for Windows with built in time track
 
 ## Installation
 
-Download the `release` folder and run setup.exe
+[here]().
+
+ç
+
+Download the latest release [here](https://github.com/dmaccormac/wintree/releases/tag/wintree) here
