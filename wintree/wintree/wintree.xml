@@ -1,23 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Tree Name="MyTree">
-	<Group Name="Workstations" Icon="z:\folder.ico">
-		<Item Name="Bob" Command="mstsc.exe" Parameters="/V:bob-pc" />
-		<Item Name="Alice" Command="mstsc.exe" Parameters="/V:alice-pc"/>
+	<Group Name="Workstations" Icon="icons\folder.ico">
+		<Item Name="Alice" Command="mstsc.exe" Parameters="/V:alice-pc" Icon="icons\computer.ico"/>
+		<Item Name="Bob" Command="mstsc.exe" Parameters="/V:bob-pc" Icon="icons\computer.ico"/>
 	</Group>
 
-	<Group Name="Servers" Icon="z:\folder.ico">
-		<Item Name="Contoso DC1"  Command="mstsc.exe" Parameters="/V:dc1.corp.contoso.com" />
-		<Item Name="Contoso FS1"  Command="mstsc.exe" Parameters="/V:fs1.corp.contoso.com"/>
+	<Group Name="Servers" Icon="icons\folder.ico">
+		<Item Name="Contoso DC1"  Command="mstsc.exe" Parameters="/V:dc1.corp.contoso.com" Icon="icons\server.ico"/>
+		<Item Name="Contoso FS1"  Command="mstsc.exe" Parameters="/V:fs1.corp.contoso.com"  Icon="icons\server.ico"/>
 	</Group>
-
-	<Group Name="Tools" Icon="z:\folder.ico">
-		<Item Name="File Explorer" Command="explorer.exe" />
-		<Item Name="Control Panel" Command="control"/>
-	</Group>
-
-	<Group Name="Bookmarks" Icon="z:\folder.ico">
-		<Item Name="Google" Command="msedge.exe" Parameters="https://www.google.com"/>
-		<Item Name="Wikipedia" Command="msedge.exe" Parameters="https://en.wikipedia.org"/>
-	</Group>
-
 </Tree>
