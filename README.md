@@ -26,7 +26,7 @@ To bring up the app menu, right click on the tree.
 | Launch        | Open selected item                   |
 | Open XML      | Open an XML tree file                |
 | Edit XML      | Edit the current XML tree file       |
-| Refersh       | Reload tree items from XML file      |
+| Refresh       | Reload tree items from XML file      |
 | View Log      | View the log file                    |
 | Always on Top | Keep application above other windows |
 | About         | Display application info             |
@@ -56,12 +56,14 @@ The sample file _wintree.xml_ is shown below.
         </Group>
     </Tree>
 
+#### XML Tags
+
 wintree uses three XML tags to store the tree information: `Tree`, `Group` and `Tag`
 
-An overview of the tags is shown below. Optional attributes are denoted with ?
+An overview of each XML tag is shown below. Optional attributes are denoted with ?
 
-| Tag   | Description                                               | Attributes                       |
-| ----- | --------------------------------------------------------- | -------------------------------- |
-| Tree  | Top level tag which wraps the entire tree structure       | Name                             |
-| Group | A collection of items displayed a folder in the tree      | Name, Icon?                      |
-| Item  | Used to specify the command and paramters of the launcher | Name, Command, Parameters, Icon? |
+| Tag   | Description                                             | Attributes                       |
+| ----- | ------------------------------------------------------- | -------------------------------- |
+| Tree  | Top level tag which wraps the entire tree structure     | Name                             |
+| Group | A collection of items displayed as a folder in the tree | Name, Icon?                      |
+| Item  | Specify the command and paramters of the launcher       | Name, Command, Parameters, Icon? |
